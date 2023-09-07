@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 dotenv.config({ path: __dirname + "/.env" });
-const Port = process.env.PORT || 4000;
+const Port = process.env.PORT || 3000;
 
 // defining the get current time function
 function getCurrentTimeWithinWindow() {
@@ -40,8 +40,9 @@ app.get("/api", (req, res) => {
       current_day: currentDay,
       utc_time: currentTime,
       track: track,
-      github_file_url: "",
-      github_repo_url: "",
+      github_file_url:
+        "https://github.com/Luther1921/stage_one/blob/main/index.js",
+      github_repo_url: "https://github.com/Luther1921/stage_one",
       status_code: 200,
     };
 
