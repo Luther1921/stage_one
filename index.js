@@ -4,22 +4,13 @@ const dotenv = require("dotenv");
 dotenv.config({ path: __dirname + "/.env" });
 const Port = process.env.PORT || 3000;
 
-// defining the get current time function
-function getCurrentTimeWithinWindow() {
-  const currentTime = new Date();
-  const offsetMinutes = Math.floor(Math.random() * 5); // Random offset within +/-2 minutes
-  const offsetMilliseconds = offsetMinutes * 60 * 1000;
-
-  const adjustedTime = new Date(currentTime.getTime() + offsetMilliseconds);
-  return adjustedTime.toISOString();
-}
-
 app.get("/api", (req, res) => {
   try {
     const slack_name = req.query.slack_name;
     const track = req.query.track;
 
-    const currentTime = getCurrentTimeWithinWindow();
+    // to get the current time
+    const currentTime = new Date().toISOString();
 
     // to get the current day
 
