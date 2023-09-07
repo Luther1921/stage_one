@@ -10,7 +10,7 @@ app.get("/api", (req, res) => {
     const track = req.query.track;
 
     // to get the current time
-    const currentTime = new Date().toISOString();
+    const currentTime = new Date().toISOString().split(".")[0] + "Z";
 
     // to get the current day
 
