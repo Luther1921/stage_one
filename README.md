@@ -1,4 +1,4 @@
-# Stage 1 Task - Zuri Internship (Backend)
+# Stage 1 Task - HNGx Internship (Backend)
 
 ## Objective
 
